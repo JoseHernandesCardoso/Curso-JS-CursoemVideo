@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boas Vindas</title>
+    <style>
+        body{
+            background-color:rgb(42, 131, 180);
+            font: normal 20pt Arial;
+            color:rgb(34, 34, 34);
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var nome = window.prompt('Olá, usuário! Qual o seu nome?')
+        window.alert(`${nome}, prazer em te conhecer!`)
+        var idade = Number(window.prompt(`Qual a sua idade, ${nome}`))
+        document.write(`<h2>Boas Vindas, ${nome}</h2><br>`)
+        document.write(`<strong>Você possui ${idade} anos<br>`)
+        document.write(`daqui 10 anos você terá ${idade+10}</strong>`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Nacionalidade</title>
+    <style>
+        body{
+            background-color: green;
+            color: rgb(243, 244, 248);
+            font: normal 18pt Arial;
+        }
+        h1{
+            padding: 10px;
+            padding-bottom: 0;
+            margin: 10px;
+            margin-left: 5px;
+        }
+        p{
+            margin: 10px;
+            margin-left: 5px;
+        }
+        input{
+            margin-left: 5px;
+            font-size: 15pt;
+            width: 100px;
+        }
+        input#entrada{
+            width: 170px;
+        }
+        div#res{
+            height: 60px;
+            width: 710px;
+            border-radius: 5px;
+            margin: 5px;
+            background-color: rgb(21, 255, 0);
+            color: black;
+            text-align: center;
+            line-height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Verificador de Nacionalidade</h1>
+    <p>Digite sua nacionalidade a baixo e depois clique em <strong>enviar</strong></p>
+    <input type="text" id="entrada"> <input type="button" value="ENVIAR" id="enviar">
+    <div id="res"></div>
+
+    <script>
+        var enviar = document.querySelector('input#enviar')
+        enviar.addEventListener('click', verifica)
+
+        function verifica(){
+            var entrada = document.querySelector('input#entrada')
+            var pais = entrada.value
+            var res = document.getElementById('res')
+            if (pais == 'Brasil'){
+                var nacionalidade = 'brasileiro'
+            } else{
+                var nacionalidade = 'estrangeiro'
+            }
+            res.innerHTML = `Você nasceu no <strong>${pais}</strong>, portanto você é <strong>${nacionalidade}</strong>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vogal ou Consoante</title>
+</head>
+<body>
+    <p>Digite apenas UM caractere</p>
+    <input type="text" name="letra" id="entrada">
+    <input type="button" value="ENVIAR" id="botao">
+    <div id="res"></div>
+
+    <script>
+        var botao = document.getElementById('botao')
+        var entrada = document.getElementById('entrada')
+        var res = document.getElementById('res')
+        botao.addEventListener('click', verificar)
+
+        function verificar(){
+            var letra = entrada.value.toLowerCase()
+            if (letra == 'a' || letra == 'e' || letra == 'i' || letra == 'o' || letra == 'u'){
+                var tipo = 'vogal'
+            } else if (letra.length != 1){
+                var tipo = 'invalido'
+            } else{
+                var tipo = 'consoante'
+            }
+            res.innerHTML = `<strong>${letra.toUpperCase()} é ${tipo} </strong>`
+        }
+    </script>
+    
+</body>
+</html>
